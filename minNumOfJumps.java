@@ -31,6 +31,7 @@ public class minNumOfJumps {
         return jump;
     }
 
+
     // O(N) | O(1)
     public static int solution2(int arr[]){
         int jump = 1;
