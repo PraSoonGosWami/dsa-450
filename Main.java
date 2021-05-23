@@ -8,14 +8,13 @@ import static dsa.unionIntersection.unionUnsorted1;
 import static dsa.unionIntersection.unionUnsorted2;
 import static dsa.unionIntersection.solution;
 import dsa.maxSubarraySum.*;
+import dsa.minimzeHeigths.*;
 
 public class Main {
     public static void main(String[] args) {
-        int arr[] = new int[] {-2, -3, 4, -1, -2, 1, 5, -3};
+        int arr[] = new int[] {6, 1, 9, 1, 1, 7, 9, 5, 2, 10};
         int arr2[] = new int[] {2,2,3,3,9};
-        //unionUnsorted1(arr,arr2);
-        maxSubarraySum.solution(arr);
-        maxSubarraySum.solution2(arr);
+        System.out.println(minimzeHeigths.solution2(arr,4,arr.length));
 
     }
 }
