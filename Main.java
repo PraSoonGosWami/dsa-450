@@ -1,7 +1,9 @@
 package dsa;
 
 
+import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Collections;
 
 
 import static dsa.unionIntersection.unionUnsorted1;
@@ -16,6 +18,7 @@ public class Main {
         int arr2[] = new int[] {2,2,3,3,9};
         System.out.println(minimzeHeigths.solution2(arr,4,arr.length));
 
+        ArrayList<ArrayList<Integer>> res = new ArrayList<>();
 
 
     }
