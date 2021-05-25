@@ -16,5 +16,7 @@ public class Main {
         int arr2[] = new int[] {2,2,3,3,9};
         System.out.println(minimzeHeigths.solution2(arr,4,arr.length));
 
+
+
     }
 }
