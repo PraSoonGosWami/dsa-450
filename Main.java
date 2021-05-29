@@ -1,24 +1,23 @@
 package dsa;
 
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Collections;
+import java.util.*;
 
 
 import static dsa.unionIntersection.unionUnsorted1;
 import static dsa.unionIntersection.unionUnsorted2;
 import static dsa.unionIntersection.solution;
-import dsa.maxSubarraySum.*;
-import dsa.minimzeHeigths.*;
+import  dsa.nextPermutation.*;
+
+
 
 public class Main {
     public static void main(String[] args) {
-        int arr[] = new int[] {6, 1, 9, 1, 1, 7, 9, 5, 2, 10};
-        int arr2[] = new int[] {2,2,3,3,9};
-        System.out.println(minimzeHeigths.solution2(arr,4,arr.length));
+        int arr[] = new int[]{5,6,5,4};
+        int arr2[][] = new int[][]{{1,3}, {2,5}, {1,0}, {3,6}, {9,9}};
 
-        ArrayList<ArrayList<Integer>> res = new ArrayList<>();
+        nextPermutation.solution(arr);
+
 
 
     }
