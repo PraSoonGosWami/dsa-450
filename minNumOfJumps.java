@@ -42,7 +42,7 @@ public class minNumOfJumps {
             steps--;
             if(steps == 0){
                 jump++;
-                steps = maxJump = i;
+                steps = maxJump - i;
                 if(i >= maxJump)
                     return -1;
             }

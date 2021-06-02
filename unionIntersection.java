@@ -73,7 +73,7 @@ public class unionIntersection {
             l.add(x);
         for(int x : b)
             r.add(x);
-        //System.out.println("UNION: " + l.addAll(r) + " " + l);
+        System.out.println("UNION: " + l.addAll(r) + " " + l);
         System.out.println("INTERSECTION: " + l.retainAll(r) + " " + l);
     }
 

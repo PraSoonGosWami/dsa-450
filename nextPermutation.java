@@ -2,14 +2,14 @@ package dsa;
 
 import java.util.Arrays;
 
-public class nextPermutation {
+public class nextPermutation{
     /**
      * Next Permutation
      * https://leetcode.com/problems/next-permutation/
      * O(N) | O(1)
      */
 
-    public static void solution(int [] nums){
+    public static void solution(char [] nums){
         int n = nums.length;
         //get the pivot element and break from the loop
         //pivot element is that element from back where a[i] < a[i+1]
@@ -27,11 +27,11 @@ public class nextPermutation {
 
         //get the element from back which is greater than pivot element
         //when found swap pivot with the first appearing greater number from back
-        // break from the loop
+        //break from the loop
         int j = n - 1;
         while(j > i && i != - 1){
             if(nums[j] > nums[i]){
-                int t = nums[j];
+                char t = nums[j];
                 nums[j] = nums[i];
                 nums[i] = t;
                 break;
@@ -44,12 +44,12 @@ public class nextPermutation {
         int start = i + 1;
         int end = n - 1;
         while(start < end){
-            int t = nums[start];
+            char t = nums[start];
             nums[start] = nums[end];
             nums[end] = t;
             start++; end--;
         }
 
-        System.out.println(Arrays.toString(nums));
+        System.out.println(String.valueOf(nums));
     }
 }

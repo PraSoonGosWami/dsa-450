@@ -22,5 +22,6 @@ public class moveNegativeToLeft {
                 index++;
             }
         }
+        System.out.println(index);
     }
 }
