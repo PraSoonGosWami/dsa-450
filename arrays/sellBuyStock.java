@@ -1,5 +1,6 @@
-package dsa;
+package dsa.arrays;
 
+import java.security.KeyPair;
 import java.util.ArrayList;
 
 public class sellBuyStock {
@@ -9,13 +10,13 @@ public class sellBuyStock {
      * O(N) | O(1)
      */
 
-    public static int solution(int [] prices){
+    public static int solution1(int[] prices) {
         int profit = 0;
         int min = Integer.MAX_VALUE;
-        for(int i = 0; i < prices.length; i++){
-            if(prices[i] < min)
+        for (int i = 0; i < prices.length; i++) {
+            if (prices[i] < min)
                 min = prices[i];
-            else if(prices[i] - min > profit)
+            else if (prices[i] - min > profit)
                 profit = prices[i] - min;
         }
         return profit;
@@ -28,11 +29,11 @@ public class sellBuyStock {
      * O(N) | O(1)
      */
 
-    public static int solution2(int [] prices){
+    public static int solution2(int[] prices) {
         int profit = 0;
-        for(int i = 1; i < prices.length; i++){
-            if(prices[i] > prices[i-1])
-                profit += prices[i] - prices[i-1];
+        for (int i = 1; i < prices.length; i++) {
+            if (prices[i] > prices[i - 1])
+                profit += prices[i] - prices[i - 1];
         }
 
         return profit;
@@ -46,28 +47,28 @@ public class sellBuyStock {
      * O(N) | O(1)
      */
 
-    public static ArrayList<ArrayList<Integer>> stockBuySell(int A[], int n) {
+    public static ArrayList<ArrayList<Integer>> solution3(int A[], int n) {
         ArrayList<ArrayList<Integer>> res = new ArrayList<>();
-        if(n == 0 || n == 1)
+        if (n == 0 || n == 1)
             return res;
         int minIndex = 0;
-        for(int i = 1; i < n; i++){
-            if(A[i] <= A[i-1]){
-                if(minIndex != i - 1){
+        for (int i = 1; i < n; i++) {
+            if (A[i] <= A[i - 1]) {
+                if (minIndex != i - 1) {
                     ArrayList<Integer> index = new ArrayList<>();
-                    index.add(0,minIndex);
-                    index.add(1,i - 1);
+                    index.add(0, minIndex);
+                    index.add(1, i - 1);
                     res.add(index);
                 }
                 minIndex = i;
             }
         }
 
-        if(minIndex == n-1)
+        if (minIndex == n - 1)
             return res;
         ArrayList<Integer> index = new ArrayList<>();
-        index.add(0,minIndex);
-        index.add(1,n - 1);
+        index.add(0, minIndex);
+        index.add(1, n - 1);
         res.add(index);
 
         return res;

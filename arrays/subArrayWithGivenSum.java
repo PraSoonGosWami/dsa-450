@@ -1,6 +1,5 @@
-package dsa;
+package dsa.arrays;
 
-import java.util.Arrays;
 import java.util.HashSet;
 
 public class subArrayWithGivenSum {
@@ -35,21 +34,21 @@ public class subArrayWithGivenSum {
     public static boolean solution2(int[] arr, int k) {
 
         int start = 0, sum = 0;
-        for(int i = 0; i < arr.length; i++){
-            while (sum > k && start < i){
+        for (int i = 0; i < arr.length; i++) {
+            while (sum > k && start < i) {
                 sum -= arr[start];
                 start++;
             }
-            if(sum == k){
-                System.out.println(start + "-" + (i-1));
+            if (sum == k) {
+                System.out.println(start + "-" + (i - 1));
                 return true;
             }
             sum += arr[i];
         }
         //if last element alone == k
         //we need to check for the edge case
-        if(sum - arr[start] == k) {
-            System.out.println(arr.length-1);
+        if (sum - arr[start] == k) {
+            System.out.println(arr.length - 1);
             return true;
         }
         return false;
@@ -65,24 +64,24 @@ public class subArrayWithGivenSum {
      */
     public static boolean solution3(int[] arr, int k) {
         int min = Integer.MAX_VALUE;
-        for(int x : arr) min = Math.min(min,x);
+        for (int x : arr) min = Math.min(min, x);
         min = Math.abs(min);
         int sum = 0, start = 0;
-        for(int i = 0; i < arr.length; i++){
-            while( sum - (i - start) * min  > k && start < i ){
+        for (int i = 0; i < arr.length; i++) {
+            while (sum - (i - start) * min > k && start < i) {
                 sum = sum - arr[start] - min;
                 start++;
             }
 
-            if(sum - (i - start) * min == k ) {
-                System.out.println(start + "-" + (i-1));
+            if (sum - (i - start) * min == k) {
+                System.out.println(start + "-" + (i - 1));
                 return true;
             }
 
             sum += arr[i] + min;
         }
 
-        if(sum - arr[start] == k) return true;
+        if (sum - arr[start] == k) return true;
 
         return false;
     }

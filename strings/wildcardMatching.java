@@ -1,4 +1,4 @@
-package dsa;
+package dsa.strings;
 
 public class wildcardMatching {
     /**

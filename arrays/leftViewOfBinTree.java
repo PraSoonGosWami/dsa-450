@@ -1,4 +1,4 @@
-package dsa;
+package dsa.arrays;
 
 
 class Node {

@@ -1,4 +1,4 @@
-package dsa;
+package dsa.arrays;
 
 public class reverseTheArrays {
     //Write a program to reverse an array or string
